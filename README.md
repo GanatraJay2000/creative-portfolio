@@ -2,7 +2,7 @@
 
 A journey through developing a portfolio with micro animations &amp; transitions using Next.js | GSAP | Framer Motion | Locomotive Scroll and many more.
 
-Reference: Dennis Snellenberg, Olivier Larose
+Reference: Dennis Snellenberg, Olivier Larose, Kevin Powell
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

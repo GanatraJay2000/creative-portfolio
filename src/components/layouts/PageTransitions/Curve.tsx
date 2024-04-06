@@ -29,7 +29,7 @@ export default function Curve({ children }: { children: React.ReactNode }) {
     enter: {
       opacity: 0,
       top: -100,
-      transitionEnd: { top: "70%", opacity: 1 },
+      transitionEnd: { top: "70%", opacity: 0 },
       transition: { duration: 0.75, delay: 0.3, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
@@ -44,7 +44,7 @@ export default function Curve({ children }: { children: React.ReactNode }) {
       {dimensions.width > 0 ? (
         <SVG {...dimensions} />
       ) : (
-        <div className=" w-dvw h-[calc(100dvh+600px)] -top-[300px] left-0 fixed pointer-events-none" />
+        <div className="w-dvw h-[calc(100dvh+600px)] -top-[300px] left-0 fixed pointer-events-none" />
       )}
       <motion.p
         {...anim(text)}

@@ -122,7 +122,11 @@
   grid-column: full-width;
 }
 
-body::before {
+body {
+  background: #000;
+}
+
+body.lines::before {
   --cal: calc(8.3333333333% - 1px);
   content: "";
   pointer-events: none;

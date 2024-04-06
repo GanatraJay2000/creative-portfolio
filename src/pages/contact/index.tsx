@@ -1,40 +1,10 @@
 import Inner from "@/components/layouts/Inner";
+import Image from "next/image";
 
 export default function Contact() {
   return (
-    <Inner>
-      <div className="text-3xl font-bold">Contact</div>
-      <div className="py-10">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque,
-        modi voluptatibus hic, possimus ipsa harum ipsam dolorem fuga,
-        voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore!
-      </div>
-      <div className="p1">
+    <>
+      <div className="p1 mb-10 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
         dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus
         consequat hendrerit in sit amet nisl. Fusce ac scelerisque nibh. Fusce
@@ -71,7 +41,14 @@ export default function Contact() {
         pulvinar bibendum. Etiam vel auctor justo, sed tempus dui. Etiam non
         odio in ligula tincidunt volutpat.
       </div>
-      <div className="full-width"></div>
+      <div className="full-width">
+        <Image
+          src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          width={2071}
+          height={1381}
+          alt="Space"
+        />
+      </div>
       <div className="p1 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
         dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus
@@ -109,33 +86,28 @@ export default function Contact() {
         pulvinar bibendum. Etiam vel auctor justo, sed tempus dui. Etiam non
         odio in ligula tincidunt volutpat.
       </div>
-      <div className="p1 full-width bg-red-100 py-10">
-        <div className="">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          maximus dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex
-          at lacus consequat hendrerit in sit amet nisl. Fusce ac scelerisque
-          nibh. Fusce id justo vitae sem consequat hendrerit.
-        </div>
-        <div className="breakout">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          maximus dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex
-          at lacus consequat hendrerit in sit amet nisl. Fusce ac scelerisque
-          nibh. Fusce id justo vitae sem consequat hendrerit.
-        </div>
-      </div>
 
-      <div className="p1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
-        dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus
-        consequat hendrerit in sit amet nisl. Fusce ac scelerisque nibh. Fusce
-        id justo vitae sem consequat hendrerit. Sed commodo dignissim orci id
-        lacinia. Proin non lorem augue. Quisque neque libero, convallis nec
-        fringilla vel, viverra quis mauris. Etiam gravida congue erat nec
-        semper. Maecenas sodales eros dolor, in congue nibh auctor mattis.
-        Praesent at sapien mauris. Curabitur interdum ornare enim, a varius
-        ligula finibus sit amet. Maecenas maximus lacus eget gravida fermentum.
-        Aliquam sit amet dictum leo.
-      </div>
+      <Image
+        src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        width={2071}
+        height={1381}
+        alt="Space"
+        className="full-width"
+      />
+      <section className="bg-purple-100 full-width">
+        <div className="p1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          maximus dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex
+          at lacus consequat hendrerit in sit amet nisl. Fusce ac scelerisque
+          nibh. Fusce id justo vitae sem consequat hendrerit. Sed commodo
+          dignissim orci id lacinia. Proin non lorem augue. Quisque neque
+          libero, convallis nec fringilla vel, viverra quis mauris. Etiam
+          gravida congue erat nec semper. Maecenas sodales eros dolor, in congue
+          nibh auctor mattis. Praesent at sapien mauris. Curabitur interdum
+          ornare enim, a varius ligula finibus sit amet. Maecenas maximus lacus
+          eget gravida fermentum. Aliquam sit amet dictum leo.
+        </div>
+      </section>
       <div className="p1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
         dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus
@@ -173,6 +145,6 @@ export default function Contact() {
         pulvinar bibendum. Etiam vel auctor justo, sed tempus dui. Etiam non
         odio in ligula tincidunt volutpat.
       </div>
-    </Inner>
+    </>
   );
 }
