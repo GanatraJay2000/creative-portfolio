@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <div
       ref={projectsContainer}
-      className="Projects flex flex-col mt-[25vh] text-white p-[10%]"
+      className="Projects flex flex-col p-[10%] text-white bg-[#1c1d20]"
     >
       <div className="projectDescription flex h-[700px] gap-5 w-full justify-between">
         <div

@@ -1,21 +1,35 @@
 import ScaleOutPT from "@/components/layouts/PageTransitions/ScaleOutPT";
 import Stairs from "@/components/layouts/PageTransitions/Stairs";
 import Curve from "@/components/layouts/PageTransitions/Curve";
-import { delay } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-export const anim = (variants: any, custom?: any) => {
-  return {
-    initial: "initial",
-    animate: "enter",
-    exit: "exit",
-    transition: variants.transition,
-    custom,
-    variants,
-  };
+const Anim = ({
+  children,
+  pt,
+}: {
+  children: React.ReactNode;
+  pt: "curve" | "stairs" | "scaleOutPT";
+}) => {
+  switch (pt) {
+    case "curve":
+      return <Curve>{children}</Curve>;
+    case "stairs":
+      return <Stairs>{children}</Stairs>;
+    case "scaleOutPT":
+      return <ScaleOutPT>{children}</ScaleOutPT>;
+  }
 };
 
-export default function Inner({ children }: { children: React.ReactNode }) {
-  return <Curve>{children}</Curve>;
-  return <Stairs>{children}</Stairs>;
-  return <ScaleOutPT>{children}</ScaleOutPT>; // Dont forget to move Header
+export default function Inner({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <Anim pt="curve">
+      <div className={cn(``, className)}>{children}</div>
+    </Anim>
+  );
 }

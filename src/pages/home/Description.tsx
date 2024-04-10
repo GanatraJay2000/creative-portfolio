@@ -2,19 +2,22 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRef } from "react";
+import { Fonts } from "@/lib/fonts";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Description() {
   const phrases = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "Soluta voluptatum, in ea eum similique repellendus.",
-    "facilis ut rem excepturi aliquam, fugiat enim? Sed.",
+    "Avid Coder, Designer, and Developer.",
+    "Passionate about creating beautiful and functional websites.",
+    "Looking for full-time opportunities starting May 2024.",
   ];
   return (
-    <div className="Description relative z-10 mt-[30vw] lg:ml-[20vw]">
-      {phrases.map((phrase, i) => (
-        <AnimatedText key={i}>{phrase}</AnimatedText>
-      ))}
+    <div className="Description relative z-[1] mt-[80vh] mb-[50vh] flex justify-center">
+      <div className="">
+        {phrases.map((phrase, i) => (
+          <AnimatedText key={i}>{phrase}</AnimatedText>
+        ))}
+      </div>
     </div>
   );
 }
@@ -30,7 +33,6 @@ function AnimatedText({ children }: { children: React.ReactNode }) {
           start: "0px bottom",
           end: "bottom+=400px bottom",
           scrub: true,
-          markers: true,
         },
         left: "-200px",
         opacity: 0,
@@ -41,10 +43,7 @@ function AnimatedText({ children }: { children: React.ReactNode }) {
     }
   );
   return (
-    <p
-      ref={text}
-      className="relative prose lg:prose-2xl prose-slate prose-invert uppercase "
-    >
+    <p ref={text} className={`relative prose prose-2xl font-medium `}>
       {children}
     </p>
   );

@@ -1,10 +1,13 @@
+import TextGradientParagh from "@/components/TextGradientParagh";
+import Header from "@/components/layouts/Header";
 import Inner from "@/components/layouts/Inner";
+import { Fonts } from "@/lib/fonts";
 
 export default function About() {
   return (
-    <Inner>
-      <div className="text-3xl font-bold">About</div>
-      <div className="py-10">
+    <Inner className="content-grid">
+      <div className="text-3xl font-black">About</div>
+      <p className={`py-10 mb-32 `}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque,
         modi voluptatibus hic, possimus ipsa harum ipsam dolorem fuga,
         voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
@@ -12,28 +15,58 @@ export default function About() {
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Enim cumque, modi voluptatibus hic, possimus ipsa Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Enim cumque, modi voluptatibus hic, possimus ipsa Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
+        Enim cumque, modi voluptatibus hic, possimus ipsa Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa harum ipsam dolorem fuga, voluptatem neque? Ipsa, maxime
+        natus nihil libero ipsam veritatis nostrum labore! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
+        possimus ipsa
+      </p>
+      <TextGradientParagh
+        className={`py-10 mb-32 level-2 text-justify ${Fonts.lora} font-black`}
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque,
+        modi voluptatibus hic, possimus ipsa harum ipsam dolorem fuga,
+        voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
         fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
         nostrum labore! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Enim cumque, modi voluptatibus hic, possimus ipsa harum ipsam dolorem
-        fuga, voluptatem neque? Ipsa, maxime natus nihil libero ipsam veritatis
-        nostrum labore!
-      </div>
+        Enim cumque, modi voluptatibus hic, possimus ipsa
+      </TextGradientParagh>
       <div className="p1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
         dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus

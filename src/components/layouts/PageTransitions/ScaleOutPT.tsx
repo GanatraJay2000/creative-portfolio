@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Header from "@/components/layouts/Header";
-import { anim } from "@/components/layouts/Inner";
+import { anim } from "@/lib/utils";
 
 export default function ScaleOutPT({
   children,
@@ -30,14 +30,13 @@ export default function ScaleOutPT({
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-[#1c1d20]">
       <motion.div
         {...anim(slide)}
         className="fixed top-0 left-0 bg-white h-dvh w-dvw z-10"
       ></motion.div>
       <motion.div {...anim(perspective)} className="bg-white">
         <motion.div {...anim(opacity)} className="content-grid">
-          <Header />
           {children}
         </motion.div>
       </motion.div>

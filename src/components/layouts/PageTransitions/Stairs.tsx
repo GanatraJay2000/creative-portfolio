@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { anim } from "@/components/layouts/Inner";
+import { anim } from "@/lib/utils";
 
 export default function Stairs({ children }: { children: React.ReactNode }) {
   const expand = {

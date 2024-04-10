@@ -94,7 +94,15 @@
     [breakout-start]
     var(--cal)
     [content-start]
+    var(--cal)
+    [level-2-start]
+    var(--cal)
+    [level-1-start]
     auto
+    [level-1-end]
+    var(--cal)
+    [level-2-end]
+    var(--cal)
     [content-end]
     var(--cal)
     [breakout-end]
@@ -114,6 +122,13 @@
   grid-column: content;
 }
 
+:is(.content-grid, .full-width, .content-grid-restricted) > .level-1 {
+  grid-column: level-1;
+}
+:is(.content-grid, .full-width, .content-grid-restricted) > .level-2 {
+  grid-column: level-2;
+}
+
 :is(.content-grid, .full-width, .content-grid-restricted) > .breakout {
   grid-column: breakout;
 }
@@ -123,7 +138,9 @@
 }
 
 body {
-  background: #000;
+  background: #1c1d20;
+  background: white;
+  /* color: white; */
 }
 
 body.lines::before {
@@ -146,4 +163,50 @@ body.lines::before {
   );
   --to-opacity: 0.05;
   opacity: var(--to-opacity);
+}
+
+.burger {
+  width: 100%;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    top: -5px;
+  }
+
+  &::before {
+    top: 5px;
+  }
+}
+
+.burgerActive {
+  &::after {
+    transform: rotate(45deg);
+    top: -1px;
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+}
+
+.mask {
+  z-index: 100;
+  mask-image: url("../../public/mask.svg");
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  background: #ec4e39;
+  position: absolute;
+  color: black;
 }

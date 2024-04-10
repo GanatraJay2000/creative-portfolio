@@ -1,9 +1,10 @@
+import Header from "@/components/layouts/Header";
 import Inner from "@/components/layouts/Inner";
 import Image from "next/image";
 
 export default function Contact() {
   return (
-    <>
+    <Inner>
       <div className="p1 mb-10 ">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus
         dolor lectus, et aliquet ligula consectetur ut. Cras vitae ex at lacus
@@ -145,6 +146,6 @@ export default function Contact() {
         pulvinar bibendum. Etiam vel auctor justo, sed tempus dui. Etiam non
         odio in ligula tincidunt volutpat.
       </div>
-    </>
+    </Inner>
   );
 }

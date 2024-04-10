@@ -1,8 +1,7 @@
-import { delay, easeIn, motion } from "framer-motion";
-import { anim } from "@/components/layouts/Inner";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { init } from "next/dist/compiled/webpack/webpack";
+import { anim } from "@/lib/utils";
 
 export default function Curve({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -48,11 +47,11 @@ export default function Curve({ children }: { children: React.ReactNode }) {
       )}
       <motion.p
         {...anim(text)}
-        className="absolute top-[40%] left-1/2 -translate-x-1/2 text-3xl text-white z-20"
+        className="absolute top-[40%] left-1/2 text-white -translate-x-1/2 text-5xl  z-50"
       >
-        {routes[router.route]}
+        . {routes[router.route]}
       </motion.p>
-      <div className="content-grid">{children}</div>
+      <div className="">{children}</div>
     </div>
   );
 }
@@ -93,8 +92,9 @@ const SVG = ({ width, height }: { width: number; height: number }) => {
 
   return (
     <motion.svg
+      style={{ fill: "black" }}
       {...anim(slide)}
-      className=" w-dvw h-[calc(100dvh+600px)] -top-[300px] left-0 fixed pointer-events-none"
+      className=" w-dvw h-[calc(100dvh+600px)] -top-[300px] left-0 fixed pointer-events-none z-40"
     >
       <motion.path {...anim(curve)}></motion.path>
     </motion.svg>

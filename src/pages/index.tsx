@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Intro from "@/pages/home/Intro";
 import Description from "@/pages/home/Description";
 import Projects from "@/pages/home/Projects";
+import Works from "@/pages/home/Works";
+import Inner from "@/components/layouts/Inner";
 
 export default function Home() {
   useEffect(() => {
@@ -12,10 +14,11 @@ export default function Home() {
     })();
   }, []);
   return (
-    <>
+    <Inner>
       <Intro />
       <Description />
+      <Works />
       <Projects />
-    </>
+    </Inner>
   );
 }

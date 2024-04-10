@@ -1,3 +1,4 @@
+import Cursor from "@/components/layouts/Cursor";
 import { DarkModeToggle } from "@/components/layouts/DarkModeToggle";
 import Header from "@/components/layouts/Header";
 import Inner from "@/components/layouts/PageTransitions/ScaleOutPT";
@@ -6,8 +7,10 @@ import { Fonts } from "@/lib/fonts";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import type { AppProps } from "next/app";
+import { useRef } from "react";
 
 export default function App({ Component, pageProps, router }: AppProps) {
+  const stickyElementRef = useRef(null);
   return (
     <ThemeProvider
       attribute="class"
@@ -16,7 +19,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
       disableTransitionOnChange
     >
       <div className={`content-grid-restricted ${Fonts.inter}`}>
-        {/* <Header className="content-part" /> */}
+        <Header ref={stickyElementRef} />
+        <Cursor stickyElement={stickyElementRef} />
         <AnimatePresence mode="wait">
           <Component key={router.route} {...pageProps} />
         </AnimatePresence>
