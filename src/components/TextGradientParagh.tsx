@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -14,46 +14,46 @@ function TextGradientParagh({
 }) {
   const element = useRef(null);
 
-  useGSAP(() => {
-    // const tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: element.current,
-    //     start: "top 90%",
-    //     end: "top 60%",
-    //     scrub: true,
-    //     markers: true,
-    //   },
-    // });
-    // tl.fromTo(
-    //   ".word",
-    //   {
-    //     opacity: 0.5,
-    //   },
-    //   {
-    //     opacity: 1,
-    //     stagger: 0.1,
-    //   }
-    // );
-    let words = gsap.utils.toArray(".word");
-    words.forEach((word, index) => {
-      gsap.to(
-        word,
-        {
-          opacity: 0.5,
-        },
-        {
-          opacity: 1,
-          scrollTrigger: {
-            trigger: word,
-            start: "top 90%",
-            end: "top 60%",
-            scrub: true,
-            markers: true,
-          },
-        }
-      );
-    });
-  });
+  // useGSAP(() => {
+  // const tl = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: element.current,
+  //     start: "top 90%",
+  //     end: "top 60%",
+  //     scrub: true,
+  //     markers: true,
+  //   },
+  // });
+  // tl.fromTo(
+  //   ".word",
+  //   {
+  //     opacity: 0.5,
+  //   },
+  //   {
+  //     opacity: 1,
+  //     stagger: 0.1,
+  //   }
+  // );
+  //   let words: Array<gsap.TweenTarget> = gsap.utils.toArray(".word");
+  //   words.forEach((word, index) => {
+  //     gsap.to(
+  //       word,
+  //       {
+  //         opacity: 0.5,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         scrollTrigger: {
+  //           trigger: word,
+  //           start: "top 90%",
+  //           end: "top 60%",
+  //           scrub: true,
+  //           markers: true,
+  //         },
+  //       }
+  //     );
+  //   });
+  // });
 
   const words = children!.toString().split(" ");
   return (
@@ -75,21 +75,21 @@ function TextGradientParagh({
   );
 }
 
-function Word({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const wordRef = useRef(null);
+// function Word({
+//   children,
+//   className,
+// }: {
+//   children: React.ReactNode;
+//   className?: string;
+// }) {
+//   const wordRef = useRef(null);
 
-  return (
-    <span ref={wordRef} className={cn("mr-3", className)}>
-      {children}
-    </span>
-  );
-}
+//   return (
+//     <span ref={wordRef} className={cn("mr-3", className)}>
+//       {children}
+//     </span>
+//   );
+// }
 
 export default TextGradientParagh;
 
