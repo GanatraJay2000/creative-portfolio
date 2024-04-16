@@ -104,19 +104,14 @@ function Model({ geometry, materials, ...props }) {
     { scope: meshRef.current }
   );
 
-  const materialProps = useControls({
-    thickness: { value: 0.5, min: 0, max: 3, step: 0.05 },
-
-    roughness: { value: 0, min: 0, max: 1, step: 0.1 },
-
-    transmission: { value: 0, min: 0, max: 1, step: 0.1 },
-
-    ior: { value: 1.4, min: 0, max: 3, step: 0.1 },
-
-    chromaticAberration: { value: 1.4, min: 0, max: 1 },
-
-    backside: { value: true },
-  });
+  const materialProps = {
+    thickness: 0.5,
+    roughness: 0,
+    transmission: 1,
+    ior: 1.4,
+    chromaticAberration: 1.4,
+    backside: true,
+  };
   const modes = ["translate", "rotate", "scale"];
   const [curMode, setMode] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -144,9 +139,7 @@ function Model({ geometry, materials, ...props }) {
         ref={meshRef}
         name={"Model"}
         geometry={new THREE.TorusGeometry(2, 1, 16, 32)}
-        onContextMenu={(e) => (
-          e.stopPropagation(), setMode((curMode + 1) % modes.length)
-        )} // material={startingMaterial}
+        // material={startingMaterial}
         onClick={handleClick}
         visible={visible}
         onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
