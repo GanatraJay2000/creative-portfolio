@@ -1,5 +1,4 @@
 import TextGradientParagh from "@/components/TextGradientParagh";
-import Header from "@/components/layouts/Header";
 import Inner from "@/components/layouts/Inner";
 import { Fonts } from "@/lib/fonts";
 

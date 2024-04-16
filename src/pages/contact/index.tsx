@@ -1,4 +1,3 @@
-import Header from "@/components/layouts/Header";
 import Inner from "@/components/layouts/Inner";
 import Image from "next/image";
 

@@ -59,6 +59,7 @@ export default function SidebarLink({
         onClick={() => {
           setSidebarActive(false);
         }}
+        scroll={false}
         href={href}
       >
         {title}

@@ -61,7 +61,7 @@ const Header = forwardRef(function Header(
         <div className="grow"></div>
         <div className="nav-links flex gap-10 text-lg">
           {links.map((link) => (
-            <Link key={link.title} href={link.href}>
+            <Link scroll={false} key={link.title} href={link.href}>
               {link.title}
             </Link>
           ))}

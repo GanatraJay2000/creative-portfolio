@@ -1,10 +1,17 @@
 // import Inner from "@/components/layouts/Inner";
-import { useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Intro from "@/pages/home/Intro";
 import Description from "@/pages/home/Description";
 import Projects from "@/pages/home/Projects";
 import Works from "@/pages/home/Works";
 import Inner from "@/components/layouts/Inner";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import {
+  TransitionContext,
+  TransitionContextType,
+} from "@/context/TransitionContext";
+gsap.registerPlugin(useGSAP);
 
 export default function Home() {
   useEffect(() => {
