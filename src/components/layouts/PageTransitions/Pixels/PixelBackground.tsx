@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const numColumns = 20;
 const columnWidth = 100 / numColumns;
-
+// Animation Direction - Start Animation From - End Animation From
 const directions = [
   "vDD",
   "vDU",
@@ -19,7 +19,7 @@ const directions = [
 
 const Blocks = ({
   indexOfColumn = 0,
-  direction = "vDD",
+  direction = "hRL",
 }: {
   indexOfColumn?: number;
   direction?: (typeof directions)[number];
@@ -35,7 +35,7 @@ const Blocks = ({
         duration: 0,
         delay:
           0.03 *
-          delays[["vUU", "vDU", "vLL", "vRL"].includes(direction) ? 0 : 1],
+          delays[["hLL", "vUU", "vDU", "hRL"].includes(direction) ? 0 : 1],
       },
     }),
     exit: (delays: Array<number>) => ({
@@ -44,7 +44,7 @@ const Blocks = ({
         duration: 0,
         delay:
           0.03 *
-          delays[["vUU", "vUD", "vLL", "vLR"].includes(direction) ? 0 : 1],
+          delays[["hLL", "vUU", "vUD", "hLR"].includes(direction) ? 0 : 1],
       },
     }),
   };
