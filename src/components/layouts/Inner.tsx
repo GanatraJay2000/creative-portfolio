@@ -9,9 +9,11 @@ import {
 } from "@/context/TransitionContext";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Pixels from "./PageTransitions/Pixels";
+import Header from "./Header";
 gsap.registerPlugin(useGSAP);
 
-type type = "curve" | "stairs" | "scaleOutPT" | "none";
+type type = "curve" | "stairs" | "scaleOutPT" | "pixels" | "none";
 
 const Anim = ({ children, pt }: { children: React.ReactNode; pt: type }) => {
   switch (pt) {
@@ -21,6 +23,8 @@ const Anim = ({ children, pt }: { children: React.ReactNode; pt: type }) => {
       return <Stairs>{children}</Stairs>;
     case "scaleOutPT":
       return <ScaleOutPT>{children}</ScaleOutPT>;
+    case "pixels":
+      return <Pixels>{children}</Pixels>;
     default:
       return <>{children}</>;
   }
@@ -29,7 +33,7 @@ const Anim = ({ children, pt }: { children: React.ReactNode; pt: type }) => {
 export default function Inner({
   children,
   className,
-  type = "curve",
+  type = "pixels",
 }: {
   children: React.ReactNode;
   className?: string;
@@ -48,7 +52,10 @@ export default function Inner({
     // <div ref={container}>
     <div>
       <Anim pt={type}>
-        <div className={cn(``, className)}>{children}</div>
+        <div className={cn(``, className)}>
+          <Header />
+          {children}
+        </div>
       </Anim>
     </div>
   );

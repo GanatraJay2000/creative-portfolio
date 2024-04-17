@@ -22,7 +22,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         disableTransitionOnChange
       >
         <div className={`content-grid-restricted ${Fonts.inter}`}>
-          <Header ref={stickyElementRef} />
+          {/* <Header ref={stickyElementRef} /> */}
           {/* <Cursor stickyElement={stickyElementRef} /> */}
 
           {/* Framer Motion */}

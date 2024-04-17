@@ -11,7 +11,7 @@ export const anim = (variants: any, custom?: any) => {
     animate: "enter",
     exit: "exit",
     transition: variants.transition,
-    custom: variants.custom,
+    custom: custom,
     variants,
   };
 };

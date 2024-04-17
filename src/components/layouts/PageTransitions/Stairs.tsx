@@ -40,7 +40,7 @@ export default function Stairs({ children }: { children: React.ReactNode }) {
         {...anim(overlay)}
         className="h-dvh w-dvw fixed top-0 left-0 pointer-events-none bg-black"
       ></motion.div>
-      <div className="content-grid">{children}</div>
+      {children}
     </div>
   );
 }
