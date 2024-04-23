@@ -54,7 +54,7 @@ function Sidebar({ isActive, setIsActive, links }: SidebarProps) {
       ></motion.div>
       <motion.div
         {...anim(menuSlide)}
-        className="menu fixed right-[-100px] h-dvh bg-[#1c1d20] text-white w-1/3 z-[51]"
+        className="menu fixed right-[-100px] top-0 h-dvh bg-[#1c1d20] text-white w-1/3 z-[51]"
       >
         <Curve />
         <div className="menu-body p-24 flex flex-col h-full justify-between">

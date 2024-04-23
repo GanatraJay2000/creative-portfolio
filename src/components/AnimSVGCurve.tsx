@@ -65,7 +65,7 @@ function AnimSVGCurve() {
         }}
         onMouseMove={mouseMoveEvent}
         onMouseLeave={() => animateOut()}
-        className="box h-10 relative top-[-20px] z-10  hover:h-[200px] hover:top-[-100px]"
+        className="box h-[200px] relative top-[-100px] z-10  hover:h-[200px] hover:top-[-100px]"
       ></div>
       <svg className="w-full h-[100px] absolute top-[-50px]">
         <path ref={path} className="stroke-1 stroke-black fill-none"></path>

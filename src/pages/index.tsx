@@ -11,6 +11,7 @@ import {
   TransitionContext,
   TransitionContextType,
 } from "@/context/TransitionContext";
+import Gallery from "./home/Gallery";
 gsap.registerPlugin(useGSAP);
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
     <Inner>
       <Intro />
       <Description />
+      <Gallery />
       <Works />
       <Projects />
     </Inner>

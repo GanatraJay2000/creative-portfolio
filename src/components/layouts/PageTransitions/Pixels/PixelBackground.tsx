@@ -19,7 +19,7 @@ const directions = [
 
 const Blocks = ({
   indexOfColumn = 0,
-  direction = "hRL",
+  direction = "vDD",
 }: {
   indexOfColumn?: number;
   direction?: (typeof directions)[number];
