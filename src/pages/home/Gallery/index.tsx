@@ -1,4 +1,4 @@
-import galleryData from "@/pages/home/Gallery/data";
+import { galleryData } from "@/pages/home/Gallery/data";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

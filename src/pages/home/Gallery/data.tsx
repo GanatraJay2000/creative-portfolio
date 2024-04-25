@@ -7,7 +7,7 @@ import Floating6 from "../../../../public/assets/images/gallery/floating_6.jpg";
 import Floating7 from "../../../../public/assets/images/gallery/floating_7.jpg";
 import Floating8 from "../../../../public/assets/images/gallery/floating_8.jpg";
 
-const galleryData = {
+export const galleryData = {
   Floating1,
   Floating2,
   Floating3,
@@ -17,5 +17,3 @@ const galleryData = {
   Floating7,
   Floating8,
 };
-
-export default galleryData;
