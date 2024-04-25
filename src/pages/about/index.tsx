@@ -1,10 +1,60 @@
 import TextGradientParagh from "@/components/TextGradientParagh";
 import Inner from "@/components/layouts/Inner";
 import { Fonts } from "@/lib/fonts";
+import { useEffect } from "react";
+import Gallery from "./Gallery";
+import { useSpring } from "framer-motion";
 
 export default function About() {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const scroll = new LocomotiveScroll();
+    })();
+  }, []);
+
+  const projects = [
+    {
+      name: "Dyal Thak",
+      handle: "dyal_thak",
+    },
+
+    {
+      name: "Leidinger Matthias",
+      handle: "leidinger_matthias",
+    },
+
+    {
+      name: "Mark Rammers",
+      handle: "mark_rammers",
+    },
+
+    {
+      name: "Landon Speers",
+      handle: "landon_speers",
+    },
+  ];
+
+  const spring = {
+    stiffness: 150,
+    damping: 15,
+    mass: 0.1,
+  };
+
+  const mouseMove = (e: any) => {
+    const { clientX, clientY } = e;
+    const targetX = clientX - (window.innerWidth / 2) * 0.25;
+    const targetY = clientY - (window.innerWidth / 2) * 0.3;
+    mousePosition.x.set(targetX);
+    mousePosition.y.set(targetY);
+  };
+
+  const mousePosition = {
+    x: useSpring(0, spring),
+    y: useSpring(0, spring),
+  };
   return (
-    <Inner className="content-grid">
+    <Inner className="">
       <div className="text-3xl font-black">About</div>
       <p className={`py-10 mb-32 `}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque,
@@ -54,6 +104,13 @@ export default function About() {
         amet consectetur adipisicing elit. Enim cumque, modi voluptatibus hic,
         possimus ipsa
       </p>
+      <div className="" onMouseMove={(e) => mouseMove(e)}>
+        {projects.map(({ handle }, i) => {
+          return (
+            <Gallery mousePosition={mousePosition} handle={handle} key={i} />
+          );
+        })}
+      </div>
       <TextGradientParagh
         className={`py-10 mb-32 level-2 text-justify ${Fonts.lora} font-black`}
       >
