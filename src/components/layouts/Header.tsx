@@ -74,7 +74,7 @@ const Header = forwardRef(function Header(
           setIsActive(!isActive);
         }}
         className={cn(
-          `fixed right-0 top-0 m-10 z-[52] w-20 h-20 rounded-full cursor-pointer flex justify-center items-center bg-[#455CE9]`
+          `fixed right-0 top-0 m-10 z-[52] w-20 h-20 rounded-full cursor-pointer flex justify-center items-center bg-[#1c1d20]`
         )}
       >
         <div

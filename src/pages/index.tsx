@@ -7,11 +7,8 @@ import Works from "@/pages/home/Works";
 import Inner from "@/components/layouts/Inner";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import {
-  TransitionContext,
-  TransitionContextType,
-} from "@/context/TransitionContext";
 import Gallery from "./home/Gallery";
+import Dash from "./home/Dash";
 gsap.registerPlugin(useGSAP);
 
 export default function Home() {
@@ -23,7 +20,8 @@ export default function Home() {
   }, []);
   return (
     <Inner>
-      <Intro />
+      <Dash />
+      {/* <Intro /> */}
       <Description />
       <Gallery />
       <Works />
