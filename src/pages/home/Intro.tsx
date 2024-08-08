@@ -67,8 +67,10 @@ function Intro() {
     },
     { scope: container }
   );
+
+
   return (
-    <div ref={container} className="intro overflow-hidden">
+    <div ref={container} className="intro overflow-hidden bg-stone-800">
       <div
         ref={backgroundImage}
         className="backgroundImage absolute top-0 h-[140vh] w-full brightness-[60%]"
@@ -81,7 +83,7 @@ function Intro() {
         />
       </div>
 
-      <div className="introContainer mt-[55vh] flex items-center justify-center">
+      <div className="introContainer mt-[55vh] flex items-center justify-center mb-72">
         <div
           ref={introImage}
           data-scroll
@@ -103,10 +105,7 @@ function Intro() {
           Jay Ganatra
         </h1>
       </div>
-      <div ref={slider} className="mt-[24vh] whitespace-nowrap flex relative">
-        <p className="invisible text-transparent text-[280px] font-bold m-0 z-[99999999]">
-          Infinite Scroll
-        </p>
+      <div ref={slider} className="mt-[4vh] bg-red-300 whitespace-nowrap flex relative">
         <p
           ref={p1ref}
           className="text-white absolute text-[250px] font-bold m-0 z-[99999999]"
@@ -121,7 +120,7 @@ function Intro() {
         </p>
       </div>
 
-      <div className="h-[90vh] w-full bg-slate-900 text-red">
+      <div className="mt-96 h-[90vh] w-full bg-slate-900 text-red">
         <Shapes />
       </div>
     </div>

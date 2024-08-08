@@ -59,7 +59,7 @@ const Header = forwardRef(function Header(
           </div>
         </MagneticChild>
         <div className="grow"></div>
-        <div className="nav-links flex gap-10 text-lg">
+        <div className="nav-links flex gap-10 text-lg text-black">
           {links.map((link) => (
             <Link scroll={false} key={link.title} href={link.href}>
               {link.title}

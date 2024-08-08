@@ -7,7 +7,7 @@ function Gallery({
   handle: string;
   mousePosition: { x: MotionValue<any>; y: MotionValue<any> };
 }) {
-  const { x, y } = mousePosition;
+  const { x, y } = mousePosition ?? { x: null, y: null };
   return (
     <div
       className="h-[120vh]"

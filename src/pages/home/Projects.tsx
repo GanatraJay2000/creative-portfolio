@@ -59,14 +59,13 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="projectList mt-[200px] flex flex-col">
+      <div className="projectList mt-[200px] flex flex-col mb-80">
         {projects.map((project, index) => (
           <div
             key={index}
             onMouseOver={() => setSelectedProjects(index)}
-            className={`projectEl flex justify-end border-t border-t-white pt-10 pb-5 ${
-              index === projects.length - 1 ? "border-b" : ""
-            }`}
+            className={`projectEl flex justify-end border-t border-t-white pt-10 pb-5 ${index === projects.length - 1 ? "border-b" : ""
+              }`}
           >
             <h1 className="prose text-6xl font-bold prose-invert">
               {project.title}

@@ -53,6 +53,7 @@ export default function About() {
     x: useSpring(0, spring),
     y: useSpring(0, spring),
   };
+
   return (
     <Inner className="">
       <div className="text-3xl font-black">About</div>
@@ -107,7 +108,7 @@ export default function About() {
       <div className="" onMouseMove={(e) => mouseMove(e)}>
         {projects.map(({ handle }, i) => {
           return (
-            <Gallery mousePosition={mousePosition} handle={handle} key={i} />
+            <Gallery mousePosition={mousePosition ?? { x: null, y: null }} handle={handle} key={i} />
           );
         })}
       </div>

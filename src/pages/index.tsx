@@ -1,4 +1,3 @@
-// import Inner from "@/components/layouts/Inner";
 import { useContext, useEffect, useRef } from "react";
 import Intro from "@/pages/home/Intro";
 import Description from "@/pages/home/Description";
@@ -20,8 +19,8 @@ export default function Home() {
   }, []);
   return (
     <Inner>
-      <Dash />
-      {/* <Intro /> */}
+      {/* <Dash /> */}
+      <Intro />
       <Description />
       <Gallery />
       <Works />
